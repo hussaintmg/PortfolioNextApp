@@ -27,7 +27,7 @@ export default function Topbar({ activePage, setOpenMenu, role }) {
   };
 
   return (
-    <div className="w-full flex items-center h-auto max-[720px]:items-start max-[720px]:justify-center">
+    <div className="w-full flex items-center h-auto max-[720px]:items-start max-[720px]:justify-center relative">
       {/* Mobile Menu Button */}
       <button
         type="button"

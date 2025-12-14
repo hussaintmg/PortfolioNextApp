@@ -1,11 +1,6 @@
 "use client";
 
-import React, {
-  useState,
-  useEffect,
-  useCallback,
-  useMemo,
-} from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import AnimatedTitle from "../Components/AnimatedTitle";
 import FadeContent from "../Components/FadeContent";
@@ -160,15 +155,18 @@ export default function Skills() {
 
       {/* Skills List */}
       <RevealSection trigger="load">
-        <div className="w-full mt-10 flex justify-center">
-          <FadeContent className="block w-full ml-[15%]">
-            <h3 className="text-green-500 text-5xl max-[1000px]:text-4xl font-bold mb-5">
+        <div className="w-full mt-10 flex justify-center ml-[15%] max-[1000px]:ml-[10%]">
+          <FadeContent className="block w-full ">
+            <h3 className="text-green-500 text-5xl max-[1000px]:text-3xl font-bold mb-5 max-[350px]:text-xl">
               Skills & Technologies:
             </h3>
             <ul className="list-disc ml-15 text-gray-300 space-y-3">
               {skList.map((item, i) => (
-                <li key={i} className="text-2xl font-light">
-                  <span className="text-white font-extrabold mr-2">
+                <li
+                  key={i}
+                  className="text-2xl font-light max-[1000px]:text-xl max-[350px]:text-sm"
+                >
+                  <span className="text-white font-extrabold mr-2 max-[1000px]:text-2xl max-[350px]:text-sm">
                     {item.heading}:
                   </span>
                   {item.list}
@@ -181,9 +179,11 @@ export default function Skills() {
 
       {/* Services */}
       <RevealSection trigger="scroll">
-        <div className="w-full flex flex-col gap-6 mt-[6cm] mb-10">
+        <div
+          className="w-full flex flex-col gap-6 mb-10 mt-[6cm] max-[1000px]:mt-[4cm] max-[350px]:mt-[2cm]"
+        >
           <FadeContent className="w-90% mx-auto">
-            <h3 className="text-green-500 text-5xl font-bold mb-4 text-left">
+            <h3 className="text-green-500 text-5xl font-bold mb-4 text-left max-[1000px]:text-3xl max-[350px]:text-xl">
               Services Offered:
             </h3>
 
@@ -212,7 +212,7 @@ export default function Skills() {
                     key={i}
                     onMouseEnter={() => setActiveService(service)}
                     onMouseLeave={() => setActiveService(null)}
-                    className="list-disc text-2xl font-light cursor-pointer"
+                    className="list-disc text-2xl font-light cursor-pointer max-[1000px]:text-xl max-[350px]:text-sm"
                   >
                     {service.title}
                   </li>
